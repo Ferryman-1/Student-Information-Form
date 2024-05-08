@@ -68,5 +68,5 @@ for (let i = 0; i < arr.length; i++) {
       }
 ```
 (3). 注意书写的位置，应该放到**新增数据的前面， 阻止默认行为的后面**
-### 示例图
+### 示例图：
 [![student](https://img.17carat.cn/2024/04/student.png "student")](https://img.17carat.cn/2024/04/student.png "student")
