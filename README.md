@@ -4,7 +4,7 @@
 ## 核心思路：
 ### ①： 声明一个空的数组
 const arr = []
-### ②： 点击录入模块
+### ②： 点击录入模块：
 (1). 首先取消表单默认提交事件
 `e.preventDefault()`
 (2). 创建新的对象，里面存储 表单获取过来的数据
@@ -45,7 +45,7 @@ for (let i = 0; i < arr.length; i++) {
 (6). 注意防止多次生成多条数据，先清空 tbody
 `tbody.innerHTML = ''`
 
-### ③： 点击删除模块
+### ③： 点击删除模块：
 (1). 采用事件委托形式，给 tbody 注册点击事件
 ` tbody.addEventListener('click', function (e) {}`
 (2). 点击链接，要删除的是对应数组里面的这个数据，而不是删除dom节点，如何找到这个数据？
@@ -56,7 +56,7 @@ for (let i = 0; i < arr.length; i++) {
 `arr.splice(e.target.dataset.id, 1)`
 (5). 重新渲染
 `render()`
-### ④： 点击新增需要验证表单
+### ④： 点击新增需要验证表单：
 (1). 获取所有需要填写的表单， 他们共同特点都有 name属性（**属性选择器**）
 `const items = document.querySelectorAll('[name]')`
 (2). 遍历这些表单，如果有一个值为空，则return 返回提示输入为空中断程序
